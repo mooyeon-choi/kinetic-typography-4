@@ -31,7 +31,9 @@ export class Visual {
       return;
     }
 
-    for (let i = 0; i < 10; i++) {
+    const maxCnt = this.stageWidth > 400 ? 10 : 5;
+
+    for (let i = 0; i < maxCnt; i++) {
       const myPos = this.pos[(Math.random() * this.posTotal) | 0];
       if (this.stageWidth > 400) {
         this.particles.push(new Particle(myPos, this.getColor(), 20));
@@ -39,7 +41,7 @@ export class Visual {
         this.particles.push(new Particle(myPos, this.getColor(), 0));
       }
     }
-
+    console.log(this.particles.length);
     for (let i = 0; i < this.particles.length; i++) {
       const item = this.particles[i];
       if (item.radius <= 1) {
