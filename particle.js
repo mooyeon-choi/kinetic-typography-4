@@ -17,7 +17,7 @@ export class Particle {
     this.vx = 0;
     this.vy = 0;
 
-    this.fps = 30;
+    this.fps = size === 20 ? 30 : 10;
     this.fpsTime = 1000 / this.fps;
   }
 
