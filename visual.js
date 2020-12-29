@@ -31,7 +31,7 @@ export class Visual {
       return;
     }
 
-    const maxCnt = this.stageWidth > 400 ? 10 : 5;
+    const maxCnt = this.stageWidth > 400 ? 10 : 3;
 
     for (let i = 0; i < maxCnt; i++) {
       const myPos = this.pos[(Math.random() * this.posTotal) | 0];
