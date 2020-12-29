@@ -42,7 +42,6 @@ export class Visual {
         this.particles.push(new Particle(myPos, this.getColor(), 5));
       }
     }
-    console.log(this.particles.length);
     for (let i = 0; i < this.particles.length; i++) {
       const item = this.particles[i];
       if (item.radius <= 1) {
