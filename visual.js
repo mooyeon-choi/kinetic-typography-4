@@ -22,7 +22,7 @@ export class Visual {
 
   show(stageWidth, stageHeight) {
     this.stageWidth = stageWidth;
-    this.pos = this.text.setText("W", 20, stageWidth, stageHeight);
+    this.pos = this.text.setText("V", 20, stageWidth, stageHeight);
     this.posTotal = this.pos.length - 1;
   }
 
@@ -31,14 +31,14 @@ export class Visual {
       return;
     }
 
-    const maxCnt = this.stageWidth > 400 ? 10 : 3;
+    const maxCnt = this.stageWidth > 400 ? 10 : 2;
 
     for (let i = 0; i < maxCnt; i++) {
       const myPos = this.pos[(Math.random() * this.posTotal) | 0];
       if (this.stageWidth > 400) {
         this.particles.push(new Particle(myPos, this.getColor(), 20));
       } else {
-        this.particles.push(new Particle(myPos, this.getColor(), 0));
+        this.particles.push(new Particle(myPos, this.getColor(), 5));
       }
     }
     console.log(this.particles.length);

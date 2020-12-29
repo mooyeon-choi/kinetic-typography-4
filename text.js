@@ -15,7 +15,7 @@ export class Text {
 
     const myText = str;
     const fontWidth = stageWidth > 400 ? stageHeight / 1.4 : stageWidth / 1.2;
-    const fontSize = stageWidth > 400 ? stageHeight / 1.2 : stageWidth / 1.2;
+    const fontSize = stageWidth > 400 ? stageHeight / 1.2 : stageWidth;
     const fontName = "Hind";
 
     this.ctx.clearRect(0, 0, stageWidth, stageHeight);
