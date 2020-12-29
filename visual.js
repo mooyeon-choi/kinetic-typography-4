@@ -22,7 +22,8 @@ export class Visual {
 
   show(stageWidth, stageHeight) {
     this.stageWidth = stageWidth;
-    this.pos = this.text.setText("V", 20, stageWidth, stageHeight);
+    const str = this.stageWidth > 400 ? "W" : "V";
+    this.pos = this.text.setText(str, 20, stageWidth, stageHeight);
     this.posTotal = this.pos.length - 1;
   }
 
